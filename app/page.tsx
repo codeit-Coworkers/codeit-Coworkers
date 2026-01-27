@@ -1,8 +1,10 @@
+import Secession from "../public/assets/secession.svg";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-surface-primary p-10">
       <h1 className="text-3xl-b mb-4 text-color-inverse">Design Token Test</h1>
-
+      <Secession />
       <p className="text-lg-r text-color-secondary mb-8">
         surface / text / border 네이밍 기준 테스트 화면
       </p>
