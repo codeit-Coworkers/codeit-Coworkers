@@ -66,7 +66,7 @@ export default function Badge({ state, size, current, total }: BadgeProps) {
 
   return (
     <div
-      className={`inline-flex flex-row items-center justify-center gap-1 bg-color-inverse ${roundedClass} ${widthClass} ${heightClass} ${paddingClass}`}
+      className={`bg-background-primary inline-flex flex-row items-center justify-center gap-1 ${roundedClass} ${widthClass} ${heightClass} ${paddingClass}`}
     >
       {/* 아이콘 */}
       <Image

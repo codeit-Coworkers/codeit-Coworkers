@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
         /* Brand */
         brand: {
-          primary: "#10B981",
-          secondary: "#34D399",
-          tertiary: "#A3E635",
+          primary: "#5189FA",
+          secondary: "#EEF3FF",
+          tertiary: "#315296",
         },
 
         /* Point */
@@ -19,38 +23,39 @@ module.exports = {
           rose: "#F43F5E",
         },
 
-        /* Surface */
-        surface: {
-          primary: "#0F172A",
-          secondary: "#1E293B",
-          tertiary: "#334155",
+        /* Background */
+        background: {
+          primary: "#FFFFFF",
+          secondary: "#F1F5F9",
+          tertiary: "#E2E8F0",
+          inverse: "#FFFFFF",
         },
 
         /* Interaction */
         interaction: {
           inactive: "#94A3B8",
-          hover: "#059669",
-          pressed: "#047857",
+          hover: "#416EC8",
+          pressed: "#3B63B5",
         },
 
         /* ✅ Color (TEXT / BORDER 공용) */
-        "color-primary": "#F8FAFC",
-        "color-secondary": "#CBD5E1",
-        "color-tertiary": "#E2E8F0",
+        "color-primary": "#1E293B",
+        "color-secondary": "#334155",
+        "color-tertiary": "#0F172A",
         "color-default": "#64748B",
         "color-inverse": "#FFFFFF",
         "color-disabled": "#94A3B8",
 
         /* Status */
         status: {
-          danger: "#DC2626",
+          danger: "#FC4B4B",
         },
 
         /* Icon */
         icon: {
-          primary: "#64748B",
-          inverse: "#F8FAFC",
-          brand: "#10B981",
+          primary: "#E2E8F0",
+          inverse: "#E2E8F0",
+          brand: "#74A1FB",
         },
       },
 
