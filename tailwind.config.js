@@ -31,6 +31,11 @@ module.exports = {
           inverse: "#FFFFFF",
         },
 
+        /* Border */
+        border: {
+          primary: "#F8FAFC",
+        },
+
         /* Interaction */
         interaction: {
           inactive: "#94A3B8",
