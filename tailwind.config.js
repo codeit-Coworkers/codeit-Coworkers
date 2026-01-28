@@ -43,7 +43,7 @@ module.exports = {
           pressed: "#3B63B5",
         },
 
-        /* ✅ Color (TEXT / BORDER 공용) */
+        /* ✅ Color (TEXT) */
         "color-primary": "#1E293B",
         "color-secondary": "#334155",
         "color-tertiary": "#0F172A",
