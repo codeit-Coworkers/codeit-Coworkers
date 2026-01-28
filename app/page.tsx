@@ -3,40 +3,40 @@ import Secession from "../public/assets/secession.svg";
 export default function Home() {
   return (
     <main className="min-h-screen bg-surface-primary p-10">
-      <h1 className="text-3xl-b mb-4 text-color-inverse">Design Token Test</h1>
+      <h1 className="mb-4 text-3xl-b text-color-inverse">Design Token Test</h1>
       <Secession />
-      <p className="text-lg-r text-color-secondary mb-8">
+      <p className="mb-8 text-lg-r text-color-secondary">
         surface / text / border 네이밍 기준 테스트 화면
       </p>
 
       {/* Button 테스트 */}
-      <div className="flex gap-4 mb-10">
-        <button className="bg-brand-primary text-color-inverse px-6 py-3 rounded-lg hover:bg-interaction-hover">
+      <div className="mb-10 flex gap-4">
+        <button className="rounded-lg bg-brand-primary px-6 py-3 text-color-inverse hover:bg-interaction-hover">
           Primary
         </button>
 
-        <button className="bg-point-purple text-color-inverse px-6 py-3 rounded-lg">
+        <button className="rounded-lg bg-point-purple px-6 py-3 text-color-inverse">
           Point
         </button>
       </div>
 
       {/* Surface 테스트 */}
       <div className="grid grid-cols-3 gap-6">
-        <div className="bg-surface-secondary p-6 rounded-xl">
+        <div className="rounded-xl bg-surface-secondary p-6">
           <p className="text-lg-m text-color-primary">Surface Secondary</p>
-          <p className="text-md-r text-color-secondary mt-2">
+          <p className="mt-2 text-md-r text-color-secondary">
             카드 / 섹션 배경
           </p>
         </div>
 
-        <div className="bg-surface-tertiary p-6 rounded-xl">
+        <div className="rounded-xl bg-surface-tertiary p-6">
           <p className="text-lg-m text-color-primary">Surface Tertiary</p>
-          <p className="text-md-r text-color-secondary mt-2">서브 레이어</p>
+          <p className="mt-2 text-md-r text-color-secondary">서브 레이어</p>
         </div>
 
-        <div className="bg-surface-secondary border border-primary p-6 rounded-xl">
+        <div className="border-primary rounded-xl border bg-surface-secondary p-6">
           <p className="text-lg-m text-color-primary">Surface + Border</p>
-          <p className="text-md-r text-color-secondary mt-2">카드 + 경계선</p>
+          <p className="mt-2 text-md-r text-color-secondary">카드 + 경계선</p>
         </div>
       </div>
 

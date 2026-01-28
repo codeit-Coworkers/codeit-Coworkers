@@ -18,11 +18,11 @@ jobs:
       - name: push to personal repo
         uses: cpina/github-action-push-to-another-repository@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.YOHAN_DEPLOY_GH_TOKEN }}   # 🔑 시크릿 이름
+          API_TOKEN_GITHUB: ${{ secrets.YOHAN_DEPLOY_GH_TOKEN }} # 🔑 시크릿 이름
         with:
-          source-directory: 'output'
-          destination-github-username: ghddygks45   # ❗ 너 개인 GitHub 아이디
-          destination-repository-name: codeit-Coworkers      # ❗ fork한 개인 레포 이름
-          user-email: ${{ secrets.YOHAN_GH_EMAIL }}             # 📧 시크릿 이름
+          source-directory: "output"
+          destination-github-username: ghddygks45 # ❗ 너 개인 GitHub 아이디
+          destination-repository-name: codeit-Coworkers # ❗ fork한 개인 레포 이름
+          user-email: ${{ secrets.YOHAN_GH_EMAIL }} # 📧 시크릿 이름
           commit-message: "chore: sync from team repo"
           target-branch: main
