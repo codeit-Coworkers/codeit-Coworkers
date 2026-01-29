@@ -2,6 +2,42 @@
 
 import { useMemo, useState } from "react";
 
+/**
+ * CalendarDate 컴포넌트에 전달되는 props 타입
+ */
+interface Props {
+  /**
+   * 현재 선택된 날짜
+   * @default null
+   */
+  selectedDate: Date | null;
+
+  /**
+   * 날짜를 선택했을 때 호출되는 콜백 함수
+   * @param date 선택된 날짜 (Date 객체)
+   */
+  onSelectDate: (date: Date) => void;
+}
+
+/**
+ * CalendarDate 컴포넌트
+ *
+ * - 연, 월, 일 단위로 날짜를 선택할 수 있는 캘린더 컴포넌트입니다.
+ * - 선택된 날짜는 `Date` 객체 형태로 반환됩니다.
+ * - 시간 선택이나 표시 포맷은 이 컴포넌트에서 처리하지 않습니다.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * const [date, setDate] = useState<Date | null>(null);
+ *
+ * <CalendarDate
+ *   selectedDate={date}
+ *   onSelectDate={setDate}
+ * />
+ * ```
+ */
+
 interface Props {
   selectedDate: Date | null;
   onSelectDate: (date: Date) => void;

@@ -2,6 +2,42 @@
 
 import { useState } from "react";
 
+/**
+ * CalendarTime 컴포넌트에 전달되는 props 타입
+ */
+interface Props {
+  /**
+   * 현재 선택된 시간
+   * @example "14:30"
+   * @default null
+   */
+  selectedTime: string | null;
+
+  /**
+   * 시간을 클릭했을 때 호출되는 콜백 함수
+   * @param time 선택된 시간 문자열 ("HH:mm")
+   */
+  onSelectTime: (time: string) => void;
+}
+
+/**
+ * 오전/오후를 전환하며 시간을 선택할 수 있는 시간 선택 컴포넌트입니다.
+ *
+ * - 시간은 "HH:mm" 형식의 문자열로 반환됩니다.
+ * - 날짜나 표시 포맷에 대한 책임은 가지지 않습니다.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * const [time, setTime] = useState<string | null>(null);
+ *
+ * <CalendarTime
+ *   selectedTime={time}
+ *   onSelectTime={setTime}
+ * />
+ * ```
+ */
+
 interface Props {
   selectedTime: string | null;
   onSelectTime: (time: string) => void;
@@ -17,19 +53,20 @@ export default function CalendarTime({ selectedTime, onSelectTime }: Props) {
   return (
     <>
       <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #94A3B8;
-          border-radius: 10px;
-          border: 2px solid white; 
-          background-clip: padding-box;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background-color: transparent;
-        }
-      `}</style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px; /* 너비를 조금 넓히고 */
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #94A3B8;
+        border-radius: 10px;
+        /* 테두리를 배경색과 똑같이 투명하게 주면, 실제 막대가 안쪽으로 작아 보입니다 */
+        border: 2px solid white; 
+        background-clip: padding-box;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+    `}</style>
 
       {/* 전체 컨테이너 */}
       <div className="flex w-[288px] h-[176px] gap-[14px] p-[12px] rounded-[20px] border border-border-primary bg-white shadow-sm box-border">
